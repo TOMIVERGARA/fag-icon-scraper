@@ -2,10 +2,9 @@ from bs4 import BeautifulSoup
 import json
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
-service = Service("./chromedriver")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 startingUrl = "https://fontawesome.com/search?m=free"
 
