@@ -43,6 +43,8 @@ for li in categoriesLi:
     categoryName = getCategoryNameFromLiTag(li)
     if (categoryName == "genders"):
         categoryName = "gender"
+    if (categoryName == "disaster0crisis"):
+        categoryName = "disaster"
     categoryList.append(categoryName)
     print('➥ ' + categoryName)
 
