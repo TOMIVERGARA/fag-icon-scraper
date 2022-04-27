@@ -49,7 +49,7 @@ for li in categoriesLi:
     print('➥ ' + categoryName)
 
 for category in categoryList:
-    print('Redirecting to ' + category + ' icons page...')
+    print(f'Redirecting to {category} icons page...')
     driver.get(getCategoryUrl(category))
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     results = soup.find_all('article', {'class': 'wrap-icon'})
